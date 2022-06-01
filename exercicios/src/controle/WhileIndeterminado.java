@@ -15,7 +15,6 @@ public class WhileIndeterminado {
 			valor = entrada.nextLine();
 		}
 		
-		
 		entrada.close();
 	}
 }

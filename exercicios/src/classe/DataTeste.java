@@ -1,29 +1,27 @@
 package classe;
 
-import java.util.Scanner;
-
 public class DataTeste {
 	
 	public static void main(String[] args) {
 		
-		Scanner entrada = new Scanner(System.in);
 		
-		Data data = new Data();
-		
-		System.out.print("Digite o dia: ");
-		data.dia = entrada.nextInt();
-		
-		System.out.print("\nDigite o mês: ");
-		data.mes = entrada.nextInt();
-		
-		System.out.print("\nDigite o ano: ");
-		data.ano = entrada.nextInt();
+		Data d1 = new Data();
+		Data d2 = new Data(31, 12, 2020);
 		
 		
-		System.out.print(data.obterDataFormatada());
+//		d1.dia = 31;
+//		d1.mes = 12;
+//		d1.ano = 2020;
 		
-
-		entrada.close();
+		String dataFormatada1 = d1.obterDataFormatada();
+		
+		
+		System.out.println(dataFormatada1);
+		System.out.println(d2.obterDataFormatada());
+		
+		d1.imprimirDataFormatada();
+		d2.imprimirDataFormatada();
+		
 		
 	}
 

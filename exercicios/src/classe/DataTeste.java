@@ -20,7 +20,7 @@ public class DataTeste {
 		data.ano = entrada.nextInt();
 		
 		
-		System.out.printf("Data inserida: %d/%d/%d", data.dia, data.mes, data.ano);
+		System.out.print(data.obterDataFormatada());
 		
 
 		entrada.close();

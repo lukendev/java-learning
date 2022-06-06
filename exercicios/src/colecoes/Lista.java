@@ -1,12 +1,13 @@
 package colecoes;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Lista {
 
 	public static void main(String[] args) {
 		
-		ArrayList<Usuario> lista = new ArrayList<Usuario>();
+		List<Usuario> lista = new ArrayList<Usuario>();
 		
 		Usuario u1 = new Usuario("Ana");
 		

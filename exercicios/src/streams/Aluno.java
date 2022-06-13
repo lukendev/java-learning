@@ -16,4 +16,10 @@ public class Aluno {
 		this.bomComportamento = bomComportamento;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return nome + " tem nota " + nota;
+	}
+	
 }

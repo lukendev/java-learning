@@ -17,21 +17,25 @@ public class DesafioFilter {
 		Produto p6 = new Produto("Reglogio", 1900, 0.12, 0);
 		Produto p7 = new Produto("Monitor", 800, 0.31, 0);
 
-		List<Produto> produtos = Arrays.asList(p1, p2, p3, p4, p5, p6, p7);
+		List<Produto> produtos = 
+				Arrays.asList(p1, p2, p3, p4, p5, p6, p7);
 
 		// Filter, filter, map
-		Predicate<Produto> superPromocao = p -> p.desconto >= 0.3;
-		Predicate<Produto> freteGratis = p -> p.valorFrete == 0;
-		Predicate<Produto> produtoRelevante = p -> p.preco >= 500;
+		Predicate<Produto> superPromocao = 
+				p -> p.desconto >= 0.3;
+		Predicate<Produto> freteGratis = 
+				p -> p.valorFrete == 0;
+		Predicate<Produto> produtoRelevante = 
+				p -> p.preco >= 500;
 
 		Function<Produto, String> chamadaPromocional = 
 				p -> "Aproveite! " + p.nome + "por " + p.preco;
 
 		produtos.stream()
 			.filter(superPromocao)
-			.filter(freteGratis)
-			.filter(produtoRelevante)
-			.map(chamadaPromocional)
-			.forEach(System.out::println);
+				.filter(freteGratis)
+					.filter(produtoRelevante)
+						.map(chamadaPromocional)
+							.forEach(System.out::println);	
 	}
 }

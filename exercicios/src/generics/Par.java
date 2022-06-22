@@ -1,6 +1,6 @@
 package generics;
 
-public class Par<C, V> {
+public class Par<C, V>{
 
 	private C chave;
 	private V valor;
